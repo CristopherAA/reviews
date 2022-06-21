@@ -10,12 +10,10 @@ updateBars();
 
 button.addEventListener('click',newReview);
 
-for(let i=0;i<stars.length;++i){
-    stars[i].addEventListener('click',selectStar);
-}
+
+document.querySelector('.review-myself-stars').addEventListener('click',selectStar);
 
 function newReview(){
-    console.log('Entre');
     pastNumber = parseInt(elements[starSelected].textContent);
     elements[starSelected].textContent = pastNumber+1;
     updateAverage();
